@@ -7,8 +7,8 @@ with open('submission-improv.csv', 'w') as submission_improv:
         r = csv.DictReader(submission_file)
         for row in r:
             p = float(row['label'])
-            if p < 0.1:
-                p = 0
-            elif p > 0.9:
-                p = 1
+            if p < 0.05:
+                p = 0.05
+            elif p > 0.98:
+                p = 0.98
             w.writerow([row['id'], p])
