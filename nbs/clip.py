@@ -9,6 +9,6 @@ with open('submission-improv.csv', 'w') as submission_improv:
             p = float(row['label'])
             if p < 0.05:
                 p = 0.05
-            elif p > 0.98:
-                p = 0.98
+            elif p > 0.95:
+                p = 0.95
             w.writerow([row['id'], p])
